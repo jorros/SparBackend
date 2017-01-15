@@ -1,0 +1,37 @@
+﻿<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.4</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="**\*.resx" />
+    <Compile Remove="Entities\Category.cs" />
+    <Compile Remove="Entities\Product.cs" />
+    <Compile Remove="Entities\Shop.cs" />
+    <Compile Include="StaticStoreGateway.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NETStandard.Library">
+      <Version>1.6</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.NET.Sdk">
+      <Version>1.0.0-alpha-20161104-2</Version>
+      <PrivateAssets>All</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Jorros.SparBackend.Store\Jorros.SparBackend.Store.csproj">
+      <Project>{7744ADA4-AA81-4389-A016-23004F70AE07}</Project>
+      <Name>Jorros.SparBackend.Store</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Jorros.SparBackend.Entities\Jorros.SparBackend.Entities.csproj">
+      <Project>{E7AA4037-A065-45D3-B5E7-D774F89529B5}</Project>
+      <Name>Jorros.SparBackend.Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
