@@ -1,0 +1,16 @@
+{
+  "version": "1.0.0-*",
+
+  "dependencies": {
+    "Jorros.SparBackend.Entities": "1.0.0-*",
+    "Jorros.SparBackend.Store": "1.0.0-*",
+    "NETStandard.Library": "1.6.0",
+    "AutoMapper": "5.2.0" 
+  },
+
+  "frameworks": {
+    "netstandard1.6": {
+      "imports": "dnxcore50"
+    }
+  }
+}

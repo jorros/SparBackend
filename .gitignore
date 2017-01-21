@@ -32,9 +32,22 @@ Thumbs.db
 *.dmg
 *.app
 
+# NUNIT
+*.VisualState.xml
+TestResult.xml
+
 # resharper
 *_Resharper.*
 *.Resharper
 
 # dotCover
 *.dotCover
+
+# .NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+**/Properties/launchSettings.json
+
+# Visual Studio 2015 cache/options directory
+.vs/
