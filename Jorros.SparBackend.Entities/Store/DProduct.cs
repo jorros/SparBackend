@@ -10,6 +10,6 @@ namespace Jorros.SparBackend.Entities.Store
 
 		public string Description { get; set; }
 
-		public DCategory DCategory { get; set; }
+		public DCategory Category { get; set; }
 	}
 }

@@ -1,4 +1,7 @@
 ﻿using AutoMapper;
+using GraphQL;
+using GraphQL.Http;
+using Jorros.SparBackend.Queries;
 using Jorros.SparBackend.Services;
 using Jorros.SparBackend.Services.Base;
 using Jorros.SparBackend.Store;
@@ -36,7 +39,13 @@ namespace Jorros.SparBackend
 
 	        services.AddTransient<IProductGateway, StaticProductGateway>();
 	        services.AddTransient<IProductService, GatewayProductService>();
-	        services.AddScoped(sp => SetupMapper());
+
+	        services.AddTransient<RootSchema>();
+
+			services.AddScoped(sp => SetupMapper());
+
+	        services.AddScoped<IDocumentExecuter, DocumentExecuter>();
+	        services.AddScoped<IDocumentWriter, DocumentWriter>();
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)

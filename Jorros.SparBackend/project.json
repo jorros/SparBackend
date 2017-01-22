@@ -19,7 +19,8 @@
     "Jorros.SparBackend.Services": "1.0.0-*",
     "Jorros.SparBackend.Store": "1.0.0-*",
     "Jorros.SparBackend.Store.Static": "1.0.0-*",
-    "AutoMapper": "5.2.0" 
+    "AutoMapper": "5.2.0",
+    "GraphQL": "0.14.5.654" 
   },
 
   "tools": {
